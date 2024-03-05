@@ -33,14 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
           <button class="save-btn">Save</button>
         `;
   
-        // Save event to local storage
+        // Save the events to  the local storage
         const saveButton = timeBlock.querySelector('.save-btn');
         saveButton.addEventListener('click', function() {
           const eventText = timeBlock.querySelector('.event-input').value;
           localStorage.setItem(`event-${hour}`, eventText);
         });
   
-        // Load saved events from local storage
+        // Load saved events from the local storage
         const savedEvent = localStorage.getItem(`event-${hour}`);
         if (savedEvent) {
           timeBlock.querySelector('.event-input').value = savedEvent;
